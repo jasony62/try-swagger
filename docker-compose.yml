@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  back:
+    build: ./back
+    image: try-swagger/back:latest
+    container_name: try-swagger-back
+    environment:
+      - NODE_ENV=production
+    # ports:
+    #   - '3000:3000'
+    command:
+      [
+        'node',
+        'server',
+      ]
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: try-swagger-ui
+    # environment:
+    #   - URL=http://localhost:3000/oas
+    # ports:
+    #   - '7070:8080'
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: try-swagger-editor
+    # ports:
+    #   - '7071:8080'
+  
