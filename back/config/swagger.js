@@ -5,4 +5,5 @@ module.exports = {
       version: '1.0.0',
     },
   },
+  apis: ['./oas/**/*.yaml', './controllers/**/*.js'],
 }

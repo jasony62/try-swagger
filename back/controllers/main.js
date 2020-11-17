@@ -6,6 +6,8 @@ class Main extends Ctrl {
    *
    *  /tryGet:
    *    get:
+   *      tags:
+   *        - test1
    *      description: 测试get方法，传入参数，并返回结果
    *      parameters:
    *        - name: value
@@ -20,14 +22,7 @@ class Main extends Ctrl {
    *          content:
    *            application/json:
    *              schema:
-   *                type: object
-   *                properties:
-   *                  code:
-   *                    type: integer
-   *                  msg:
-   *                    type: string
-   *                  result:
-   *                    type: string
+   *                "$ref": "#/components/schemas/ResponseData"
    */
   tryGet() {
     let { value } = this.request.query
@@ -40,6 +35,8 @@ class Main extends Ctrl {
    *
    *  /tryPost:
    *    post:
+   *      tags:
+   *        - test2
    *      description: 测试post方法，传入参数，并返回结果
    *      requestBody:
    *        content:
@@ -53,14 +50,7 @@ class Main extends Ctrl {
    *          content:
    *            application/json:
    *              schema:
-   *                type: object
-   *                properties:
-   *                  code:
-   *                    type: integer
-   *                  msg:
-   *                    type: string
-   *                  result:
-   *                    type: object
+   *                "$ref": "#/components/schemas/ResponseData"
    *
    */
   tryPost() {
