@@ -27,7 +27,7 @@ class Main extends Ctrl {
   tryGet() {
     let { value } = this.request.query
     const { bucket } = this
-
+    console.log('tryGet', value)
     return new ResultData(`收到：${value}`)
   }
   /**
@@ -55,7 +55,7 @@ class Main extends Ctrl {
    */
   tryPost() {
     let posted = this.request.body
-
+    console.log('tryPost', posted)
     return new ResultData(posted)
   }
 }
