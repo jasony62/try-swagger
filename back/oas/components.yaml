@@ -9,3 +9,12 @@ components:
           type: string
         result:
           type: object
+  securitySchemes:
+    HeaderTokenAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    QueryTokenAuth:
+      type: apiKey
+      in: query
+      name: access_token

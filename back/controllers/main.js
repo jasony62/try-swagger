@@ -1,6 +1,16 @@
 const { Ctrl, ResultData } = require('tms-koa')
 
+/**
+ * 控制器类，提供API
+ * @extends Ctrl
+ */
 class Main extends Ctrl {
+  /**
+   * 返回跳过认证的方法名数组
+   */
+  static tmsAccessWhite() {
+    return ['tryGet', 'tryPost']
+  }
   /**
    * @swagger
    *
@@ -36,7 +46,7 @@ class Main extends Ctrl {
    *  /tryPost:
    *    post:
    *      tags:
-   *        - test2
+   *        - test1
    *      description: 测试post方法，传入参数，并返回结果
    *      requestBody:
    *        content:
@@ -57,6 +67,44 @@ class Main extends Ctrl {
     let posted = this.request.body
     console.log('tryPost', posted)
     return new ResultData(posted)
+  }
+  /**
+   * @swagger
+   *
+   * /tryAuthByQuery:
+   *   get:
+   *     tags:
+   *       - test2
+   *     description: 测试通过查询参数传递认真token
+   *     security:
+   *       - QueryTokenAuth: []
+   *     responses:
+   *       '200':
+   *         description: 正常调用
+   *
+   */
+  tryAuthByQuery() {
+    console.log('tryAuthByQuery')
+    return new ResultData('ok')
+  }
+  /**
+   * @swagger
+   *
+   * /tryAuthByHeader:
+   *   get:
+   *     tags:
+   *       - test2
+   *     description: 测试通过请求头传递认真token
+   *     security:
+   *       - HeaderTokenAuth: []
+   *     responses:
+   *       '200':
+   *         description: 正常调用
+   *
+   */
+  tryAuthByHeader() {
+    console.log('tryAuthByHeader')
+    return new ResultData('ok')
   }
 }
 module.exports = Main

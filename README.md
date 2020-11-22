@@ -16,7 +16,9 @@
 
 ## 配置
 
-通过新建`config\swagger.local.js`进行本地化设置，具体设置参见`tms-koa`项目。
+在`config/app.js`定义了 API 调用认证方法和账户信息，如果需要可以通过新建`config/app.local.js`进行本地化设置，具体设置参见`tms-koa`项目。
+
+通过新建`config/swagger.local.js`进行本地化设置，具体设置参见`tms-koa`项目。
 
 如果没有在配置文件中指定规范版本，`tms-koa`框架支持通过环境变量`TMS_KOA_OAS_VERSION`指定`openapi`规范的版本。
 
