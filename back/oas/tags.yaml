@@ -3,3 +3,7 @@ tags:
     description: 测试1
   - name: test2
     description: 测试2
+  - name: class1
+    description: 分类1
+  - name: class2
+    description: 分类2

@@ -18,6 +18,7 @@ class Main extends Ctrl {
    *    get:
    *      tags:
    *        - test1
+   *        - class2
    *      description: 测试get方法，传入参数，并返回结果
    *      parameters:
    *        - name: value
@@ -47,6 +48,7 @@ class Main extends Ctrl {
    *    post:
    *      tags:
    *        - test1
+   *        - class2
    *      description: 测试post方法，传入参数，并返回结果
    *      requestBody:
    *        content:
@@ -75,6 +77,7 @@ class Main extends Ctrl {
    *   get:
    *     tags:
    *       - test2
+   *       - class1
    *     description: 测试通过查询参数传递认真token
    *     security:
    *       - QueryTokenAuth: []
@@ -94,6 +97,7 @@ class Main extends Ctrl {
    *   get:
    *     tags:
    *       - test2
+   *       - class1
    *     description: 测试通过请求头传递认真token
    *     security:
    *       - HeaderTokenAuth: []
