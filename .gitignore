@@ -4,3 +4,4 @@ jmeter/
 docs/
 jmeter/
 jmeter;D/
+docker-compose.override.yml
