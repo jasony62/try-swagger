@@ -2,3 +2,5 @@ node_modules
 docker-compose.override.yml
 jmeter/
 docs/
+jmeter/
+jmeter;D/
